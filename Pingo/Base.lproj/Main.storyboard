@@ -52,7 +52,8 @@
                                                             <color key="titleColor" red="0.20000000000000001" green="0.21568627450980393" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="userAgreementAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2b0-si-hEd"/>
+                                                            <action selector="userAgreementAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fgl-ix-RbL"/>
+                                                            <segue destination="8VO-JP-5Z1" kind="show" id="3L4-9N-EiL"/>
                                                         </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconAgreement" translatesAutoresizingMaskIntoConstraints="NO" id="Jrj-Sc-sMr">
@@ -84,7 +85,8 @@
                                                             <color key="titleColor" red="0.20000000000000001" green="0.2156862745" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="policyAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Ch-6g-bwV"/>
+                                                            <action selector="policyAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sDc-5o-e9J"/>
+                                                            <segue destination="8VO-JP-5Z1" kind="show" id="VK8-Bg-eOH"/>
                                                         </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconPolicy" translatesAutoresizingMaskIntoConstraints="NO" id="bfa-GG-LsC">
@@ -117,7 +119,8 @@
                                                             <color key="titleColor" red="0.20000000000000001" green="0.2156862745" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="contact:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RAZ-Na-P1A"/>
+                                                            <action selector="contact:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8De-iJ-8ko"/>
+                                                            <segue destination="8VO-JP-5Z1" kind="show" id="YIj-Hn-rEi"/>
                                                         </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconContact" translatesAutoresizingMaskIntoConstraints="NO" id="c7y-tb-1Gg">
@@ -150,7 +153,8 @@
                                                             <color key="titleColor" red="0.20000000000000001" green="0.2156862745" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="pingoWebsiteAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NJt-fe-lSW"/>
+                                                            <action selector="pingoWebsiteAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FIZ-xw-NWB"/>
+                                                            <segue destination="8VO-JP-5Z1" kind="show" id="4lR-98-f4Q"/>
                                                         </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconWebsite" translatesAutoresizingMaskIntoConstraints="NO" id="cWz-6l-D5n">
@@ -421,6 +425,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="944.92753623188412" y="82.366071428571431"/>
+        </scene>
+        <!--Pingo-->
+        <scene sceneID="AE3-tW-R3U">
+            <objects>
+                <viewController id="8VO-JP-5Z1" customClass="SettingsWebViewController" customModule="Pingo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v0f-H7-Zzc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wvg-iu-Bhg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NO0-8h-ilE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wvg-iu-Bhg" firstAttribute="trailing" secondItem="NO0-8h-ilE" secondAttribute="trailing" id="5wL-m9-q8V"/>
+                            <constraint firstItem="Wvg-iu-Bhg" firstAttribute="top" secondItem="NO0-8h-ilE" secondAttribute="top" id="Eok-tR-85l"/>
+                            <constraint firstAttribute="bottom" secondItem="Wvg-iu-Bhg" secondAttribute="bottom" id="oWe-k9-tlk"/>
+                            <constraint firstItem="Wvg-iu-Bhg" firstAttribute="leading" secondItem="NO0-8h-ilE" secondAttribute="leading" id="zQ9-gw-Fp7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pingo" id="mWG-tJ-DdD"/>
+                    <connections>
+                        <outlet property="webView" destination="Wvg-iu-Bhg" id="5uk-YU-A3j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZXe-Ad-Qk1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="937.68115942028987" y="-644.19642857142856"/>
         </scene>
         <!--Start Web View Controller-->
         <scene sceneID="9Qn-Ha-aNa">
@@ -813,6 +852,9 @@
             <point key="canvasLocation" x="34.782608695652179" y="82.366071428571431"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="YIj-Hn-rEi"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="backIconType2" width="33" height="24"/>
         <image name="banner1" width="340" height="546"/>

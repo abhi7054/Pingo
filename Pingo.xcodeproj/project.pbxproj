@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4026580C26AB1FB2002069BB /* FontTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4026580B26AB1FB2002069BB /* FontTableViewCell.swift */; };
+		40886CDD26ABAA3300620196 /* SettingsWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40886CDC26ABAA3300620196 /* SettingsWebViewController.swift */; };
+		40886CDF26ABAAC200620196 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40886CDE26ABAAC200620196 /* Constants.swift */; };
 		40B4C72C26ABA536005118BC /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B4C72B26ABA536005118BC /* StatusViewController.swift */; };
 		40E1C18C26AA17C80072B292 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E1C18B26AA17C80072B292 /* AppDelegate.swift */; };
 		40E1C18E26AA17C80072B292 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E1C18D26AA17C80072B292 /* SceneDelegate.swift */; };
@@ -85,6 +87,8 @@
 		4026581C26AB3B26002069BB /* Hallies.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hallies.ttf; sourceTree = "<group>"; };
 		4026581D26AB3B26002069BB /* leadcoat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = leadcoat.ttf; sourceTree = "<group>"; };
 		4026581E26AB3B26002069BB /* Xposed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Xposed.ttf; sourceTree = "<group>"; };
+		40886CDC26ABAA3300620196 /* SettingsWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsWebViewController.swift; sourceTree = "<group>"; };
+		40886CDE26ABAAC200620196 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		40B4C72B26ABA536005118BC /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
 		40E1C18826AA17C80072B292 /* Pingo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pingo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E1C18B26AA17C80072B292 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +183,8 @@
 				40E1C1A126AA7A390072B292 /* WebPingoViewController.swift */,
 				40E1C18F26AA17C80072B292 /* HomeViewController.swift */,
 				40E1C19126AA17C80072B292 /* Main.storyboard */,
+				40886CDC26ABAA3300620196 /* SettingsWebViewController.swift */,
+				40886CDE26ABAAC200620196 /* Constants.swift */,
 				40B4C72B26ABA536005118BC /* StatusViewController.swift */,
 				4026580B26AB1FB2002069BB /* FontTableViewCell.swift */,
 				40E1C1BC26AB03BC0072B292 /* FancyLettersViewController.swift */,
@@ -367,11 +373,13 @@
 				40E1C19026AA17C80072B292 /* HomeViewController.swift in Sources */,
 				40E1C1AA26AA7EDD0072B292 /* WallpapersViewController.swift in Sources */,
 				40B4C72C26ABA536005118BC /* StatusViewController.swift in Sources */,
+				40886CDD26ABAA3300620196 /* SettingsWebViewController.swift in Sources */,
 				40E1C1BD26AB03BC0072B292 /* FancyLettersViewController.swift in Sources */,
 				40E1C18C26AA17C80072B292 /* AppDelegate.swift in Sources */,
 				4026580C26AB1FB2002069BB /* FontTableViewCell.swift in Sources */,
 				40E1C1BB26AAFCA10072B292 /* StartWebViewController.swift in Sources */,
 				40E1C18E26AA17C80072B292 /* SceneDelegate.swift in Sources */,
+				40886CDF26ABAAC200620196 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
