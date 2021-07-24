@@ -22,6 +22,7 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
         
         setupBackButton()
+        AppUtility.lockOrientation(.portrait)
     }
 
     @IBAction func homeAction(_ sender: Any) {
@@ -79,6 +80,7 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         self.navigationController?.navigationItem.backButtonTitle = ""
         navigationController?.interactivePopGestureRecognizer?.delegate = self
+        AppUtility.lockOrientation(.portrait)
     }
 
 }

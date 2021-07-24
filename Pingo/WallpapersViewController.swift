@@ -21,7 +21,12 @@ class WallpapersViewController: UIViewController{
         super.viewDidLoad()
         
         fetchURLs()
+        AppUtility.lockOrientation(.portrait)
        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        AppUtility.lockOrientation(.portrait)
     }
     
     @IBAction func downloadAction(_ sender: Any) {

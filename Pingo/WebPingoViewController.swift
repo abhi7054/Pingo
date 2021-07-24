@@ -1,4 +1,3 @@
-
 //
 //  WebHelperViewController.swift
 //
@@ -75,22 +74,24 @@ class WebHelperViewController: UIViewController,WKNavigationDelegate,UIGestureRe
         super.viewWillAppear(animated)
         //SET VIEW
         
+        AppUtility.lockOrientation(.all)
 //        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
 //            self.determineMyDeviceOrientation()
 //        }
         
         
         //SET NAVIGAITON AND TABBAR
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
         
         //SET NAVIGATION BAR
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
-        
-        
-
-           
+       
     }
     // Set the shouldAutorotate to False
-   
+    override open var shouldAutorotate: Bool {
+       return false
+    }
 
     // Specify the orientation.
     override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -106,10 +107,24 @@ class WebHelperViewController: UIViewController,WKNavigationDelegate,UIGestureRe
         }
     }
     override func viewWillDisappear(_ animated: Bool) {
-       
+        AppUtility.lockOrientation(.portrait)
     }
 
-    
+    func determineMyDeviceOrientation()
+       {
+        let orientation = UIDevice.current.orientation
+        if orientation == .landscapeLeft{
+            print("Device is in landscape mode")
+            AppUtility.lockOrientation(.landscapeLeft)
+        }
+        else if orientation == .landscapeRight{
+            print("Device is in landscape mode")
+            AppUtility.lockOrientation(.landscapeRight)
+        }
+        else{
+            AppUtility.lockOrientation(.portrait)
+        }
+    }
    
     deinit {
         NotificationCenter.default.removeObserver(self)
@@ -131,3 +146,6 @@ class WebHelperViewController: UIViewController,WKNavigationDelegate,UIGestureRe
      */
     
 }
+
+
+

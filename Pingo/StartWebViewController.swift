@@ -11,17 +11,18 @@ class StartWebViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        AppUtility.lockOrientation(.portrait)
         
     }
     override func viewWillAppear(_ animated: Bool) {
+        AppUtility.lockOrientation(.portrait)
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         self.navigationController?.navigationItem.backButtonTitle = ""
     }
 
     @IBAction func backAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
-        
+       
     }
     
     /*

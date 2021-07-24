@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Allow the app to access Photos in order to save wallpapers to Camera Rool</string>
+	<string>Allow the app to access Photos in order to save wallpapers to Camera Roll</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
