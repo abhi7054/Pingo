@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		400D5CC426C962B600A5E992 /* SubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400D5CC326C962B600A5E992 /* SubscribeViewController.swift */; };
+		400D5CC726C9663800A5E992 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400D5CC526C9663800A5E992 /* IAPHelper.swift */; };
+		400D5CC826C9663800A5E992 /* NetworkRequestMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400D5CC626C9663800A5E992 /* NetworkRequestMaker.swift */; };
+		400D5CCA26CBF59600A5E992 /* SubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400D5CC926CBF59600A5E992 /* SubscriptionViewController.swift */; };
 		4026580C26AB1FB2002069BB /* FontTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4026580B26AB1FB2002069BB /* FontTableViewCell.swift */; };
 		40886CDD26ABAA3300620196 /* SettingsWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40886CDC26ABAA3300620196 /* SettingsWebViewController.swift */; };
 		40886CDF26ABAAC200620196 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40886CDE26ABAAC200620196 /* Constants.swift */; };
@@ -69,6 +73,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		400D5CC326C962B600A5E992 /* SubscribeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeViewController.swift; sourceTree = "<group>"; };
+		400D5CC526C9663800A5E992 /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
+		400D5CC626C9663800A5E992 /* NetworkRequestMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequestMaker.swift; sourceTree = "<group>"; };
+		400D5CC926CBF59600A5E992 /* SubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewController.swift; sourceTree = "<group>"; };
 		4026580B26AB1FB2002069BB /* FontTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontTableViewCell.swift; sourceTree = "<group>"; };
 		4026580E26AB3B21002069BB /* waltographUI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = waltographUI.ttf; sourceTree = "<group>"; };
 		4026580F26AB3B22002069BB /* Baisley.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Baisley.ttf; sourceTree = "<group>"; };
@@ -183,6 +191,10 @@
 				40E1C1A126AA7A390072B292 /* WebPingoViewController.swift */,
 				40E1C18F26AA17C80072B292 /* HomeViewController.swift */,
 				40E1C19126AA17C80072B292 /* Main.storyboard */,
+				400D5CC926CBF59600A5E992 /* SubscriptionViewController.swift */,
+				400D5CC326C962B600A5E992 /* SubscribeViewController.swift */,
+				400D5CC526C9663800A5E992 /* IAPHelper.swift */,
+				400D5CC626C9663800A5E992 /* NetworkRequestMaker.swift */,
 				40886CDC26ABAA3300620196 /* SettingsWebViewController.swift */,
 				40886CDE26ABAAC200620196 /* Constants.swift */,
 				40B4C72B26ABA536005118BC /* StatusViewController.swift */,
@@ -368,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				400D5CC826C9663800A5E992 /* NetworkRequestMaker.swift in Sources */,
 				40E1C1A226AA7A390072B292 /* WebPingoViewController.swift in Sources */,
 				40E1C1A026AA23D50072B292 /* RoundedView.swift in Sources */,
 				40E1C19026AA17C80072B292 /* HomeViewController.swift in Sources */,
@@ -377,8 +390,11 @@
 				40E1C1BD26AB03BC0072B292 /* FancyLettersViewController.swift in Sources */,
 				40E1C18C26AA17C80072B292 /* AppDelegate.swift in Sources */,
 				4026580C26AB1FB2002069BB /* FontTableViewCell.swift in Sources */,
+				400D5CC426C962B600A5E992 /* SubscribeViewController.swift in Sources */,
 				40E1C1BB26AAFCA10072B292 /* StartWebViewController.swift in Sources */,
 				40E1C18E26AA17C80072B292 /* SceneDelegate.swift in Sources */,
+				400D5CC726C9663800A5E992 /* IAPHelper.swift in Sources */,
+				400D5CCA26CBF59600A5E992 /* SubscriptionViewController.swift in Sources */,
 				40886CDF26ABAAC200620196 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -528,8 +544,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 35WYB54Y7Z;
 				INFOPLIST_FILE = Pingo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -549,8 +567,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = U72M7WWZ6N;
 				INFOPLIST_FILE = Pingo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
