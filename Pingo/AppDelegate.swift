@@ -7,10 +7,16 @@
 
 import UIKit
 
+struct CheckSubscriptionData: Codable {
+    let purchase: Int
+    let id: Int
+}
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var orientationLock = UIInterfaceOrientationMask.all
+    var deviceID: String!
     
     var window: UIWindow?
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
@@ -20,9 +26,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         AppUtility.lockOrientation(.portrait)
+        
+        checkUniqueID()
+        
+        getUserSubscription() { (json) in
+            AppPrefsManager.sharedInstance.setSubscriptionDetails(obj: json.purchase)
+        }
+        
         return true
     }
-
+    func checkUniqueID() {
+        if let udid = KeyChain.load(key: "uniqueID") {
+            let uniqueID = String(data: udid, encoding: String.Encoding.utf8)
+            print(uniqueID!)
+            deviceID = uniqueID
+            
+        } else {
+            let uniqueID = KeyChain.createUniqueID()
+            let data = uniqueID.data(using: String.Encoding.utf8)
+            let status = KeyChain.save(key: "uniqueID", data: data!)
+            print(uniqueID)
+            print(status)
+            deviceID = uniqueID
+        }
+    }
+    
+    
+    func getUserSubscription(completion: @escaping (CheckSubscriptionData)-> ()) {
+        let urlString = "http://back-api.com/pingo/api/checkSubscription.php?deviceid=\(deviceID ?? "")"
+        if let url = URL(string: urlString) {
+            URLSession.shared.dataTask(with: url) {data, res, err in
+                if let data = data {
+                    let decoder = JSONDecoder()
+                    do {
+                        let json: CheckSubscriptionData = try! decoder.decode(CheckSubscriptionData.self, from: data)
+                        completion(json)
+                    }
+                }
+            }.resume()
+        }
+    }
+    
     // MARK: UISceneSession Lifecycle
 
     @available(iOS 13.0, *)

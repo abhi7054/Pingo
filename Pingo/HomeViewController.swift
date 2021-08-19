@@ -59,15 +59,39 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
         Constants.websiteURL = Constants.websiteURL+Constants.contact
     }
     @IBAction func pingoWebsiteAction(_ sender: Any) {
-        
         Constants.title = "Pingo"
         Constants.websiteURL = "http://pingo-app.online/"
     }
     
+    func isPurchased() -> Bool {
+        if AppPrefsManager.sharedInstance.getSubscriptionDetails() == 0 {
+            return false
+        } else {
+            return true
+        }
+    }
+    
     @IBAction func bannerOneAction(_ sender: Any) {
+//        if isPurchased() {
+            let objStartWebViewController = self.storyboard?.instantiateViewController(withIdentifier: "StartWebViewController") as! StartWebViewController
+            self.navigationController?.pushViewController(objStartWebViewController, animated: true)
+//        } else {
+//            let objSubscribeViewController = self.storyboard?.instantiateViewController(withIdentifier: "SubscribeViewController") as! SubscribeViewController
+//            objSubscribeViewController.modalPresentationStyle = .overFullScreen
+//            self.present(objSubscribeViewController, animated: true, completion: nil)
+//        }
     }
     
     @IBAction func bannerTwoAction(_ sender: Any) {
+        if isPurchased() {
+            let objStartWebViewController = self.storyboard?.instantiateViewController(withIdentifier: "WallpapersViewController") as! WallpapersViewController
+            self.navigationController?.pushViewController(objStartWebViewController, animated: true)
+        } else {
+            let objSubscribeViewController = self.storyboard?.instantiateViewController(withIdentifier: "SubscribeViewController") as! SubscribeViewController
+            objSubscribeViewController.modalPresentationStyle = .overFullScreen
+            self.present(objSubscribeViewController, animated: true, completion: nil)
+        }
+        
     }
     
     @IBAction func bannerThreeAction(_ sender: Any) {

@@ -25,6 +25,25 @@ class StartWebViewController: UIViewController {
        
     }
     
+    func isPurchased() -> Bool {
+        if AppPrefsManager.sharedInstance.getSubscriptionDetails() == 0 {
+            return false
+        } else {
+            return true
+        }
+    }
+    
+    @IBAction func btnNextClick(_ sender: UIButton) {
+        if isPurchased() {
+            let objStartWebViewController = self.storyboard?.instantiateViewController(withIdentifier: "WebHelperViewController") as! WebHelperViewController
+            self.navigationController?.pushViewController(objStartWebViewController, animated: true)
+        } else {
+            let objSubscribeViewController = self.storyboard?.instantiateViewController(withIdentifier: "SubscribeViewController") as! SubscribeViewController
+            objSubscribeViewController.modalPresentationStyle = .overFullScreen
+            self.present(objSubscribeViewController, animated: true, completion: nil)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
