@@ -10,7 +10,7 @@ import StoreKit
 
 
 enum IAPProduct: String {
-    case weekly = "weekly" // reverse
+    case weekly = "weekly" // weekly
     case monthly = "monthly" // speakon
 }
 
