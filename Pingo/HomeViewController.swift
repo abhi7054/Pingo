@@ -21,8 +21,15 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(self.methodOfReceivedNotification(notification:)), name: Notification.Name("WallPaperSuccess"), object: nil)
+        
         setupBackButton()
         AppUtility.lockOrientation(.portrait)
+    }
+    
+    @objc func methodOfReceivedNotification(notification: Notification) {
+        let objStartWebViewController = self.storyboard?.instantiateViewController(withIdentifier: "WallpapersViewController") as! WallpapersViewController
+        self.navigationController?.pushViewController(objStartWebViewController, animated: true)
     }
 
     @IBAction func homeAction(_ sender: Any) {
@@ -64,10 +71,10 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func isPurchased() -> Bool {
-        if AppPrefsManager.sharedInstance.getSubscriptionDetails() == 0 {
-            return false
-        } else {
+        if UserDefaults.standard.string(forKey: "purchased") == "1" {
             return true
+        } else {
+            return false
         }
     }
     
@@ -88,6 +95,7 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
             self.navigationController?.pushViewController(objStartWebViewController, animated: true)
         } else {
             let objSubscribeViewController = self.storyboard?.instantiateViewController(withIdentifier: "SubscribeViewController") as! SubscribeViewController
+            objSubscribeViewController.strFrom = "Wallpaper"
             objSubscribeViewController.modalPresentationStyle = .overFullScreen
             self.present(objSubscribeViewController, animated: true, completion: nil)
         }

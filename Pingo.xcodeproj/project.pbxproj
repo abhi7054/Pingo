@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		400D5CC426C962B600A5E992 /* SubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400D5CC326C962B600A5E992 /* SubscribeViewController.swift */; };
-		400D5CC726C9663800A5E992 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400D5CC526C9663800A5E992 /* IAPHelper.swift */; };
 		400D5CC826C9663800A5E992 /* NetworkRequestMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400D5CC626C9663800A5E992 /* NetworkRequestMaker.swift */; };
 		400D5CCA26CBF59600A5E992 /* SubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400D5CC926CBF59600A5E992 /* SubscriptionViewController.swift */; };
 		400D5CCD26CE3F1A00A5E992 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400D5CCC26CE3F1A00A5E992 /* StoreKit.framework */; };
 		4026580C26AB1FB2002069BB /* FontTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4026580B26AB1FB2002069BB /* FontTableViewCell.swift */; };
+		4026C13126D82A55008A8BE2 /* SubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4026C12F26D82A55008A8BE2 /* SubscribeViewController.swift */; };
 		40886CDD26ABAA3300620196 /* SettingsWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40886CDC26ABAA3300620196 /* SettingsWebViewController.swift */; };
 		40886CDF26ABAAC200620196 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40886CDE26ABAAC200620196 /* Constants.swift */; };
 		40B4C72C26ABA536005118BC /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B4C72B26ABA536005118BC /* StatusViewController.swift */; };
@@ -54,6 +53,7 @@
 		40E1C1E226AB041C0072B292 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40E1C1CF26AB041C0072B292 /* Poppins-SemiBold.ttf */; };
 		40E1C1E326AB041C0072B292 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40E1C1D026AB041C0072B292 /* Poppins-Italic.ttf */; };
 		40E1C1E426AB041C0072B292 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40E1C1D126AB041C0072B292 /* Poppins-MediumItalic.ttf */; };
+		40F3C8E026E5532C00CEB258 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F3C8DF26E5532C00CEB258 /* IAPHelper.swift */; };
 		40FB767126AB41E500D74109 /* 80db.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4026581026AB3B23002069BB /* 80db.ttf */; };
 		40FB767226AB41F200D74109 /* Baisley.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4026580F26AB3B22002069BB /* Baisley.ttf */; };
 		40FB767326AB41F500D74109 /* BitterPastryDemoRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4026581126AB3B23002069BB /* BitterPastryDemoRegular.ttf */; };
@@ -71,12 +71,9 @@
 		40FB767F26AB421800D74109 /* sewer.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4026581A26AB3B25002069BB /* sewer.ttf */; };
 		40FB768026AB421B00D74109 /* waltographUI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4026580E26AB3B21002069BB /* waltographUI.ttf */; };
 		40FB768126AB421E00D74109 /* Xposed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4026581E26AB3B26002069BB /* Xposed.ttf */; };
-		F468926626CDF795007F80E1 /* AppPrefsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F468926526CDF794007F80E1 /* AppPrefsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		400D5CC326C962B600A5E992 /* SubscribeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeViewController.swift; sourceTree = "<group>"; };
-		400D5CC526C9663800A5E992 /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
 		400D5CC626C9663800A5E992 /* NetworkRequestMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequestMaker.swift; sourceTree = "<group>"; };
 		400D5CC926CBF59600A5E992 /* SubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewController.swift; sourceTree = "<group>"; };
 		400D5CCC26CE3F1A00A5E992 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -98,6 +95,7 @@
 		4026581C26AB3B26002069BB /* Hallies.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hallies.ttf; sourceTree = "<group>"; };
 		4026581D26AB3B26002069BB /* leadcoat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = leadcoat.ttf; sourceTree = "<group>"; };
 		4026581E26AB3B26002069BB /* Xposed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Xposed.ttf; sourceTree = "<group>"; };
+		4026C12F26D82A55008A8BE2 /* SubscribeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscribeViewController.swift; sourceTree = SOURCE_ROOT; };
 		40886CDC26ABAA3300620196 /* SettingsWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsWebViewController.swift; sourceTree = "<group>"; };
 		40886CDE26ABAAC200620196 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		40B4C72B26ABA536005118BC /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
@@ -139,7 +137,7 @@
 		40E1C1CF26AB041C0072B292 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		40E1C1D026AB041C0072B292 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
 		40E1C1D126AB041C0072B292 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
-		F468926526CDF794007F80E1 /* AppPrefsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppPrefsManager.swift; sourceTree = "<group>"; };
+		40F3C8DF26E5532C00CEB258 /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,15 +198,14 @@
 			children = (
 				40E1C1AB26AAF9EA0072B292 /* Fonts */,
 				40E1C19F26AA23D50072B292 /* RoundedView.swift */,
-				F468926526CDF794007F80E1 /* AppPrefsManager.swift */,
 				40E1C18B26AA17C80072B292 /* AppDelegate.swift */,
+				40F3C8DF26E5532C00CEB258 /* IAPHelper.swift */,
 				40E1C18D26AA17C80072B292 /* SceneDelegate.swift */,
+				4026C12F26D82A55008A8BE2 /* SubscribeViewController.swift */,
 				40E1C1A126AA7A390072B292 /* WebPingoViewController.swift */,
 				40E1C18F26AA17C80072B292 /* HomeViewController.swift */,
 				40E1C19126AA17C80072B292 /* Main.storyboard */,
 				400D5CC926CBF59600A5E992 /* SubscriptionViewController.swift */,
-				400D5CC326C962B600A5E992 /* SubscribeViewController.swift */,
-				400D5CC526C9663800A5E992 /* IAPHelper.swift */,
 				400D5CC626C9663800A5E992 /* NetworkRequestMaker.swift */,
 				40886CDC26ABAA3300620196 /* SettingsWebViewController.swift */,
 				40886CDE26ABAAC200620196 /* Constants.swift */,
@@ -395,21 +392,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4026C13126D82A55008A8BE2 /* SubscribeViewController.swift in Sources */,
 				400D5CC826C9663800A5E992 /* NetworkRequestMaker.swift in Sources */,
 				40E1C1A226AA7A390072B292 /* WebPingoViewController.swift in Sources */,
 				40E1C1A026AA23D50072B292 /* RoundedView.swift in Sources */,
 				40E1C19026AA17C80072B292 /* HomeViewController.swift in Sources */,
 				40E1C1AA26AA7EDD0072B292 /* WallpapersViewController.swift in Sources */,
 				40B4C72C26ABA536005118BC /* StatusViewController.swift in Sources */,
+				40F3C8E026E5532C00CEB258 /* IAPHelper.swift in Sources */,
 				40886CDD26ABAA3300620196 /* SettingsWebViewController.swift in Sources */,
 				40E1C1BD26AB03BC0072B292 /* FancyLettersViewController.swift in Sources */,
 				40E1C18C26AA17C80072B292 /* AppDelegate.swift in Sources */,
 				4026580C26AB1FB2002069BB /* FontTableViewCell.swift in Sources */,
-				400D5CC426C962B600A5E992 /* SubscribeViewController.swift in Sources */,
 				40E1C1BB26AAFCA10072B292 /* StartWebViewController.swift in Sources */,
-				F468926626CDF795007F80E1 /* AppPrefsManager.swift in Sources */,
 				40E1C18E26AA17C80072B292 /* SceneDelegate.swift in Sources */,
-				400D5CC726C9663800A5E992 /* IAPHelper.swift in Sources */,
 				400D5CCA26CBF59600A5E992 /* SubscriptionViewController.swift in Sources */,
 				40886CDF26ABAAC200620196 /* Constants.swift in Sources */,
 			);
@@ -560,15 +556,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = 35WYB54Y7Z;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = U72M7WWZ6N;
 				INFOPLIST_FILE = Pingo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yurdaapps.pingoh;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yurdaapps.pingo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -581,9 +577,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = U72M7WWZ6N;
 				INFOPLIST_FILE = Pingo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -593,7 +589,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yurdaapps.pingo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = com.yurdaapps.pingo;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

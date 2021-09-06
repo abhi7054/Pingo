@@ -8,23 +8,13 @@ import Foundation
 import UIKit
 import StoreKit
 
-
-enum IAPProduct: String {
-    case weekly = "weekly" // weekly
-    case monthly = "monthly" // speakon
-}
-
 class IAPHelper: NSObject,SKRequestDelegate  {
     var DEVICEID:String?
-    static let shared = IAPHelper()
-    var products = [SKProduct]()
-    let paymentQueue = SKPaymentQueue.default()
     override init() {
         super.init()
-        DEVICEID = AppDelegate().deviceID
+        checkUniqueID()
         //never change this variable, app will handle itself sandbox/production modes
         let receipt = getTransactionReceipt()
-        print("Receipt key = ",receipt)
         
         if(receipt.isEmpty){
             restorePurchases()
@@ -33,27 +23,19 @@ class IAPHelper: NSObject,SKRequestDelegate  {
         }
         
     }
-    
-    func getProducts() {
-        let product: Set = [IAPProduct.weekly.rawValue, IAPProduct.monthly.rawValue]
-        let request = SKProductsRequest(productIdentifiers: product)
-        request.delegate = self
-        request.start()
-        
-        paymentQueue.add(self)
+    func checkUniqueID() {
+        if let udid = KeyChain.load(key: "uniqueID") {
+            let uniqueID = String(data: udid, encoding: String.Encoding.utf8)
+            print(uniqueID!)
+            DEVICEID = uniqueID
+            
+        } else {
+            let uniqueID = KeyChain.createUniqueID()
+            let data = uniqueID.data(using: String.Encoding.utf8)
+            let status = KeyChain.save(key: "uniqueID", data: data!)
+            DEVICEID = uniqueID
+        }
     }
-    
-    func purchase(product: IAPProduct) {
-        guard let productToPurchase = products.filter({$0.productIdentifier == product.rawValue}).first else {return}
-        let payment = SKPayment(product: productToPurchase)
-        paymentQueue.add(payment)
-    }
-    
-    func restorePurchase() {
-           SKPaymentQueue.default().restoreCompletedTransactions()
-       }
-    
-    
     
     //important function : used to get receipt from phone
     func getTransactionReceipt() -> String {
@@ -227,95 +209,6 @@ class IAPHelper: NSObject,SKRequestDelegate  {
         }
     }
 }
-
-extension IAPHelper: SKProductsRequestDelegate {
-    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
-        print(response.products)
-        self.products = response.products
-        for products in response.products {
-            print("Product Name : ",products.localizedTitle)
-        }
-    }
-}
-
-extension IAPHelper: SKPaymentTransactionObserver {
-    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
-        for transaction in transactions {
-            print(transaction.transactionState)
-            print(transaction.transactionState.status(), transaction.payment.productIdentifier)
-            switch transaction.transactionState {
-            case .purchasing:
-                break
-            case .purchased:
-                SKPaymentQueue.default().finishTransaction(transaction as SKPaymentTransaction)
-                //denny
-                // set delegate to dismiss current view controller
-                if transaction.payment.productIdentifier == IAPProduct.weekly.rawValue {
-                    func getUserSubscription(completion: @escaping (CheckSubscriptionData)-> ()) {
-                        
-                        let receipt = getTransactionReceipt()
-                        let urlString = "http://back-api.com/pingo/api/checkSubscription.php?deviceid=\(DEVICEID ?? "")&receiptkey=\(receipt)"
-                        if let url = URL(string: urlString) {
-                            URLSession.shared.dataTask(with: url) {data, res, err in
-                                if let data = data {
-                                    let decoder = JSONDecoder()
-                                    do {
-                                        let json: CheckSubscriptionData = try! decoder.decode(CheckSubscriptionData.self, from: data)
-                                        AppPrefsManager.sharedInstance.setSubscriptionDetails(obj: json.purchase)
-                                        completion(json)
-                                    }
-                                }
-                            }.resume()
-                        }
-                    }
-                } else if transaction.payment.productIdentifier == IAPProduct.monthly.rawValue {
-                    func getUserSubscription(completion: @escaping (CheckSubscriptionData)-> ()) {
-                        let receipt = getTransactionReceipt()
-                        let urlString = "http://back-api.com/pingo/api/checkSubscription.php?deviceid=\(DEVICEID ?? "")&receiptkey=\(receipt)"
-                        if let url = URL(string: urlString) {
-                            URLSession.shared.dataTask(with: url) {data, res, err in
-                                if let data = data {
-                                    let decoder = JSONDecoder()
-                                    do {
-                                        let json: CheckSubscriptionData = try! decoder.decode(CheckSubscriptionData.self, from: data)
-                                        AppPrefsManager.sharedInstance.setSubscriptionDetails(obj: json.purchase)
-                                        completion(json)
-                                    }
-                                }
-                            }.resume()
-                        }
-                    }
-                }
-                
-
-                break
-            default: queue.finishTransaction(transaction)
-                
-            }
-        }
-    }
-}
-
-extension SKPaymentTransactionState {
-    func status() -> String {
-        switch self {
-        case .deferred:
-            return "deferred"
-        case .failed:
-            return "failed"
-        case .purchased:
-            return "purchased"
-        case .purchasing:
-            return "purchasing"
-        case .restored:
-            return "restored"
-        default:
-            return ""
-        }
-    }
-}
-
-
 extension String {
     func toDate(withFormat format: String = "yyyy-MM-dd hh:mm:ss")-> Date?{
         let dateFormatter = DateFormatter()

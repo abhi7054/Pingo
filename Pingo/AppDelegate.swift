@@ -9,7 +9,6 @@ import UIKit
 
 struct CheckSubscriptionData: Codable {
     let purchase: Int
-    let id: Int
 }
 
 @main
@@ -30,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         checkUniqueID()
         
         getUserSubscription() { (json) in
-            AppPrefsManager.sharedInstance.setSubscriptionDetails(obj: json.purchase)
+            UserDefaults.standard.set(String(json.purchase), forKey: "purchased")
         }
         
         return true
@@ -60,6 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     let decoder = JSONDecoder()
                     do {
                         let json: CheckSubscriptionData = try! decoder.decode(CheckSubscriptionData.self, from: data)
+                        print(json)
                         completion(json)
                     }
                 }

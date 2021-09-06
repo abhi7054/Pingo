@@ -11,9 +11,20 @@ class StartWebViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.methodOfReceivedNotification(notification:)), name: Notification.Name("WhatsAppSuccess"), object: nil)
+        
         AppUtility.lockOrientation(.portrait)
         
     }
+    
+    @objc func methodOfReceivedNotification(notification: Notification) {
+        print("Test")
+        let objStartWebViewController = WebHelperViewController()
+        self.navigationController?.pushViewController(objStartWebViewController, animated: true)
+        NotificationCenter.default.removeObserver(self, name: Notification.Name("WhatsAppSuccess"), object: nil)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         AppUtility.lockOrientation(.portrait)
         self.navigationController?.setNavigationBarHidden(true, animated: true)
@@ -26,10 +37,10 @@ class StartWebViewController: UIViewController {
     }
     
     func isPurchased() -> Bool {
-        if AppPrefsManager.sharedInstance.getSubscriptionDetails() == 0 {
-            return false
-        } else {
+        if UserDefaults.standard.string(forKey: "purchased") == "1" {
             return true
+        } else {
+            return false
         }
     }
     
@@ -39,6 +50,7 @@ class StartWebViewController: UIViewController {
             self.navigationController?.pushViewController(objStartWebViewController, animated: true)
         } else {
             let objSubscribeViewController = self.storyboard?.instantiateViewController(withIdentifier: "SubscribeViewController") as! SubscribeViewController
+            objSubscribeViewController.strFrom = "WhatsApp"
             objSubscribeViewController.modalPresentationStyle = .overFullScreen
             self.present(objSubscribeViewController, animated: true, completion: nil)
         }
