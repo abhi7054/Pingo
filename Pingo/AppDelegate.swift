@@ -25,13 +25,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         AppUtility.lockOrientation(.portrait)
-        
         checkUniqueID()
-        
-        getUserSubscription() { (json) in
-            UserDefaults.standard.set(String(json.purchase), forKey: "purchased")
-        }
-        
+        AppShared.shared.deviceID = deviceID
+        let iapHelper = IAPHelper.init()
+        AppShared.shared.transactionReceipt = iapHelper.getTransactionReceipt()
+        getUserSubscription()
         return true
     }
     func checkUniqueID() {
@@ -50,9 +48,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    
-    func getUserSubscription(completion: @escaping (CheckSubscriptionData)-> ()) {
-        let urlString = "http://back-api.com/pingo/api/checkSubscription.php?deviceid=\(deviceID ?? "")"
+    func getUserSubscription() {
+       
+        let urlString = "http://back-api.com/pingo/api/checkSubscription.php?deviceid=\(deviceID!)"
+        print("ID sent", urlString)
         if let url = URL(string: urlString) {
             URLSession.shared.dataTask(with: url) {data, res, err in
                 if let data = data {
@@ -60,12 +59,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     do {
                         let json: CheckSubscriptionData = try! decoder.decode(CheckSubscriptionData.self, from: data)
                         print(json)
-                        completion(json)
+                        AppShared.shared.purchased = json.purchase
                     }
                 }
             }.resume()
         }
     }
+    
+    
     
     // MARK: UISceneSession Lifecycle
 

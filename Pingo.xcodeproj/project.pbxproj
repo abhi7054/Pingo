@@ -15,6 +15,7 @@
 		40886CDD26ABAA3300620196 /* SettingsWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40886CDC26ABAA3300620196 /* SettingsWebViewController.swift */; };
 		40886CDF26ABAAC200620196 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40886CDE26ABAAC200620196 /* Constants.swift */; };
 		40B4C72C26ABA536005118BC /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B4C72B26ABA536005118BC /* StatusViewController.swift */; };
+		40DB0A8026EA65BD002F1693 /* AppShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DB0A7F26EA65BD002F1693 /* AppShared.swift */; };
 		40E1C18C26AA17C80072B292 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E1C18B26AA17C80072B292 /* AppDelegate.swift */; };
 		40E1C18E26AA17C80072B292 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E1C18D26AA17C80072B292 /* SceneDelegate.swift */; };
 		40E1C19026AA17C80072B292 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E1C18F26AA17C80072B292 /* HomeViewController.swift */; };
@@ -99,6 +100,7 @@
 		40886CDC26ABAA3300620196 /* SettingsWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsWebViewController.swift; sourceTree = "<group>"; };
 		40886CDE26ABAAC200620196 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		40B4C72B26ABA536005118BC /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		40DB0A7F26EA65BD002F1693 /* AppShared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppShared.swift; sourceTree = "<group>"; };
 		40E1C18826AA17C80072B292 /* Pingo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pingo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E1C18B26AA17C80072B292 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40E1C18D26AA17C80072B292 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				40E1C19426AA17CE0072B292 /* Assets.xcassets */,
 				40E1C19626AA17CE0072B292 /* LaunchScreen.storyboard */,
 				40E1C19926AA17CE0072B292 /* Info.plist */,
+				40DB0A7F26EA65BD002F1693 /* AppShared.swift */,
 			);
 			path = Pingo;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				40886CDD26ABAA3300620196 /* SettingsWebViewController.swift in Sources */,
 				40E1C1BD26AB03BC0072B292 /* FancyLettersViewController.swift in Sources */,
 				40E1C18C26AA17C80072B292 /* AppDelegate.swift in Sources */,
+				40DB0A8026EA65BD002F1693 /* AppShared.swift in Sources */,
 				4026580C26AB1FB2002069BB /* FontTableViewCell.swift in Sources */,
 				40E1C1BB26AAFCA10072B292 /* StartWebViewController.swift in Sources */,
 				40E1C18E26AA17C80072B292 /* SceneDelegate.swift in Sources */,
@@ -556,7 +560,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = U72M7WWZ6N;
 				INFOPLIST_FILE = Pingo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -579,7 +583,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = U72M7WWZ6N;
 				INFOPLIST_FILE = Pingo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

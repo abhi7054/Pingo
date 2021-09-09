@@ -28,8 +28,10 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     @objc func methodOfReceivedNotification(notification: Notification) {
+        print("reached")
         let objStartWebViewController = self.storyboard?.instantiateViewController(withIdentifier: "WallpapersViewController") as! WallpapersViewController
         self.navigationController?.pushViewController(objStartWebViewController, animated: true)
+        NotificationCenter.default.removeObserver(self, name: Notification.Name("WallPaperSuccess"), object: nil)
     }
 
     @IBAction func homeAction(_ sender: Any) {
@@ -70,36 +72,31 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
         Constants.websiteURL = "http://pingo-app.online/"
     }
     
-    func isPurchased() -> Bool {
-        if UserDefaults.standard.string(forKey: "purchased") == "1" {
-            return true
-        } else {
-            return false
-        }
+    func isPurchased() {
+        if AppShared.shared.purchased == 1 {
+                DispatchQueue.main.async {
+                    let objStartWebViewController = self.storyboard?.instantiateViewController(withIdentifier: "WallpapersViewController") as! WallpapersViewController
+                    self.navigationController?.pushViewController(objStartWebViewController, animated: true)
+                }
+               
+            }else {
+                DispatchQueue.main.async {
+                    let objSubscribeViewController = self.storyboard?.instantiateViewController(withIdentifier: "SubscribeViewController") as! SubscribeViewController
+                    objSubscribeViewController.strFrom = "Wallpaper"
+                    objSubscribeViewController.modalPresentationStyle = .overFullScreen
+                    self.present(objSubscribeViewController, animated: true, completion: nil)
+                }
+            }
+        
     }
     
     @IBAction func bannerOneAction(_ sender: Any) {
-//        if isPurchased() {
             let objStartWebViewController = self.storyboard?.instantiateViewController(withIdentifier: "StartWebViewController") as! StartWebViewController
             self.navigationController?.pushViewController(objStartWebViewController, animated: true)
-//        } else {
-//            let objSubscribeViewController = self.storyboard?.instantiateViewController(withIdentifier: "SubscribeViewController") as! SubscribeViewController
-//            objSubscribeViewController.modalPresentationStyle = .overFullScreen
-//            self.present(objSubscribeViewController, animated: true, completion: nil)
-//        }
     }
     
     @IBAction func bannerTwoAction(_ sender: Any) {
-        if isPurchased() {
-            let objStartWebViewController = self.storyboard?.instantiateViewController(withIdentifier: "WallpapersViewController") as! WallpapersViewController
-            self.navigationController?.pushViewController(objStartWebViewController, animated: true)
-        } else {
-            let objSubscribeViewController = self.storyboard?.instantiateViewController(withIdentifier: "SubscribeViewController") as! SubscribeViewController
-            objSubscribeViewController.strFrom = "Wallpaper"
-            objSubscribeViewController.modalPresentationStyle = .overFullScreen
-            self.present(objSubscribeViewController, animated: true, completion: nil)
-        }
-        
+        isPurchased()
     }
     
     @IBAction func bannerThreeAction(_ sender: Any) {

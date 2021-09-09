@@ -12,7 +12,7 @@ class IAPHelper: NSObject,SKRequestDelegate  {
     var DEVICEID:String?
     override init() {
         super.init()
-        checkUniqueID()
+        DEVICEID = AppShared.shared.deviceID
         //never change this variable, app will handle itself sandbox/production modes
         let receipt = getTransactionReceipt()
         
@@ -22,19 +22,6 @@ class IAPHelper: NSObject,SKRequestDelegate  {
             receiptValidation(isDebug: false)
         }
         
-    }
-    func checkUniqueID() {
-        if let udid = KeyChain.load(key: "uniqueID") {
-            let uniqueID = String(data: udid, encoding: String.Encoding.utf8)
-            print(uniqueID!)
-            DEVICEID = uniqueID
-            
-        } else {
-            let uniqueID = KeyChain.createUniqueID()
-            let data = uniqueID.data(using: String.Encoding.utf8)
-            let status = KeyChain.save(key: "uniqueID", data: data!)
-            DEVICEID = uniqueID
-        }
     }
     
     //important function : used to get receipt from phone

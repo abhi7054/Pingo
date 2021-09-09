@@ -35,25 +35,28 @@ class StartWebViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
        
     }
-    
-    func isPurchased() -> Bool {
-        if UserDefaults.standard.string(forKey: "purchased") == "1" {
-            return true
-        } else {
-            return false
-        }
+   
+    func isPurchased() {
+        if AppShared.shared.purchased == 1 {
+                DispatchQueue.main.async {
+                    let objStartWebViewController = self.storyboard?.instantiateViewController(withIdentifier: "WebHelperViewController") as! WebHelperViewController
+                    self.navigationController?.pushViewController(objStartWebViewController, animated: true)
+                }
+               
+            }else {
+                DispatchQueue.main.async {
+                    let objSubscribeViewController = self.storyboard?.instantiateViewController(withIdentifier: "SubscribeViewController") as! SubscribeViewController
+                    objSubscribeViewController.strFrom = "WhatsApp"
+                    objSubscribeViewController.modalPresentationStyle = .overFullScreen
+                    self.present(objSubscribeViewController, animated: true, completion: nil)
+                }
+            }
     }
+       
+    
     
     @IBAction func btnNextClick(_ sender: UIButton) {
-        if isPurchased() {
-            let objStartWebViewController = self.storyboard?.instantiateViewController(withIdentifier: "WebHelperViewController") as! WebHelperViewController
-            self.navigationController?.pushViewController(objStartWebViewController, animated: true)
-        } else {
-            let objSubscribeViewController = self.storyboard?.instantiateViewController(withIdentifier: "SubscribeViewController") as! SubscribeViewController
-            objSubscribeViewController.strFrom = "WhatsApp"
-            objSubscribeViewController.modalPresentationStyle = .overFullScreen
-            self.present(objSubscribeViewController, animated: true, completion: nil)
-        }
+        isPurchased()
     }
     
     /*
