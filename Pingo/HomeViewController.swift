@@ -52,24 +52,24 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBAction func userAgreementAction(_ sender: Any) {
         
         Constants.title = "User Agreement"
-        Constants.websiteURL = "http://pingo-app.online/"
+        Constants.websiteURL = "https://omboinc.com/pingo/"
         Constants.websiteURL = Constants.websiteURL+Constants.agreement
     }
     @IBAction func policyAction(_ sender: Any) {
         
         Constants.title = "Policy"
-        Constants.websiteURL = "http://pingo-app.online/"
+        Constants.websiteURL = "https://omboinc.com/pingo/"
         Constants.websiteURL = Constants.websiteURL+Constants.policy
     }
     @IBAction func contact(_ sender: Any) {
         
         Constants.title = "Contact"
-        Constants.websiteURL = "http://pingo-app.online/"
+        Constants.websiteURL = "https://omboinc.com/pingo/"
         Constants.websiteURL = Constants.websiteURL+Constants.contact
     }
     @IBAction func pingoWebsiteAction(_ sender: Any) {
         Constants.title = "Pingo"
-        Constants.websiteURL = "http://pingo-app.online/"
+        Constants.websiteURL = "https://omboinc.com/pingo/"
     }
     
     func isPurchased() {

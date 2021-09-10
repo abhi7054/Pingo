@@ -9,7 +9,7 @@ import Foundation
 
 class Constants{
     
-    static var websiteURL = "http://pingo-app.online/"
+    static var websiteURL = "https://omboinc.com/pingo/"
     static let agreement = "agreement.html"
     static let policy = "policy.html"
     static let contact = "contact.html"

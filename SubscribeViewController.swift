@@ -18,6 +18,7 @@ class SubscribeViewController: UIViewController, SKPaymentTransactionObserver, S
     var productsRequest: SKProductsRequest!
     let weeklyProductID = "weekly"
     let monthProductID = "monthly"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         SKPaymentQueue.default().add(self)
@@ -52,7 +53,9 @@ class SubscribeViewController: UIViewController, SKPaymentTransactionObserver, S
     }
     
     @IBAction func restorePurchaseButton(_ sender: UIButton) {
-        SKPaymentQueue.default().restoreCompletedTransactions()
+        let alert = UIAlertController(title: "Pingo App", message: "If you have a subscribe, please close/open app 2-3 times.", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func buyProduct(product: SKProduct){
@@ -68,7 +71,6 @@ class SubscribeViewController: UIViewController, SKPaymentTransactionObserver, S
                 case .purchasing, .deferred: break
                 case .purchased, .restored:
                     SKPaymentQueue.default().finishTransaction(transaction)
-                   
                     NetworkRequestMaker.makePostRequest(url: "http://back-api.com/pingo/api/Purchase.php", urlParameters: "deviceid=\(AppShared.shared.deviceID!) &receiptkey=\(AppShared.shared.transactionReceipt!)"){data in
                         
                             let decoder = JSONDecoder()
