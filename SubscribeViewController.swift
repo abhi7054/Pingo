@@ -18,10 +18,21 @@ class SubscribeViewController: UIViewController, SKPaymentTransactionObserver, S
     var productsRequest: SKProductsRequest!
     let weeklyProductID = "weekly"
     let monthProductID = "monthly"
+    @IBOutlet weak var monthlyButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         SKPaymentQueue.default().add(self)
+        if AppShared.shared.id == 1 {
+            monthlyButton.setTitle(NSLocalizedString("continue free", tableName: "Main", comment: ""), for: .normal)
+        }else{
+            monthlyButton.setTitle(NSLocalizedString("bYM-WF-5lT.normalTitle", tableName: "Main", comment: ""), for: .normal)
+        }
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.monthlyButton.pulse(withIntensity: 0.9, withDuration: 0.6, loop: true)
     }
     
     @IBAction func btnWeeklyClick(_ sender: UIButton) {
@@ -46,6 +57,7 @@ class SubscribeViewController: UIViewController, SKPaymentTransactionObserver, S
         }else{
             print("Can't make purchases");
         }
+        monthlyButton.layer.removeAllAnimations()
     }
     
     @IBAction func btnCloseClick(_ sender: UIButton) {
@@ -130,4 +142,13 @@ class SubscribeViewController: UIViewController, SKPaymentTransactionObserver, S
     }
 }
 
-
+extension UIView {
+    func pulse(withIntensity intensity: CGFloat, withDuration duration: Double, loop: Bool) {
+        UIView.animate(withDuration: duration, delay: 0, options: [.repeat, .autoreverse, .allowUserInteraction], animations: {
+            loop ? nil : UIView.setAnimationRepeatCount(1)
+            self.transform = CGAffineTransform(scaleX: intensity, y: intensity)
+        }) { (true) in
+            self.transform = CGAffineTransform.identity
+        }
+    }
+}

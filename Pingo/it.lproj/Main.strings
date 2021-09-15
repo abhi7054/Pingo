@@ -1,44 +1,43 @@
 
 /* Class = "UIButton"; normalTitle = "Weekly/ 1$"; ObjectID = "AnJ-BP-7LZ"; */
-"AnJ-BP-7LZ.normalTitle" = "Weekly 4.99$";
+"AnJ-BP-7LZ.normalTitle" = "Settimana 4.99$";
 
 /* Class = "UITextField"; placeholder = "Enter your text here"; ObjectID = "EEx-kE-Jer"; */
-"EEx-kE-Jer.placeholder" = "Enter your text here";
+"EEx-kE-Jer.placeholder" = "Inserisci qui il tuo testo";
 
 /* Class = "UILabel"; text = "We are not Associated with Whatsapp Inc. and its Affiliated Companies. All information Provided in this Website is for General Information only and is not Official Information from Whatsapp Inc."; ObjectID = "EZS-Ak-fzQ"; */
-"EZS-Ak-fzQ.text" = "We are not Associated with Whatsapp Inc. and its Affiliated Companies. All information Provided in this Website is for General Information only and is not Official Information from Whatsapp Inc.";
+"EZS-Ak-fzQ.text" = "Non siamo associati a Whatsapp Inc. e alle sue società affiliate. Tutte le informazioni fornite in questo sito Web sono solo per informazioni generali e non sono informazioni ufficiali di Whatsapp Inc.";
 
 /* Class = "UIButton"; normalTitle = "Policy"; ObjectID = "Idx-Zc-Rhl"; */
-"Idx-Zc-Rhl.normalTitle" = "Policy";
+"Idx-Zc-Rhl.normalTitle" = "Politica";
 
 /* Class = "UINavigationItem"; title = "Home"; ObjectID = "PGX-Yi-SaZ"; */
-"PGX-Yi-SaZ.title" = "Home";
+"PGX-Yi-SaZ.title" = "Casa";
 
 /* Class = "UIButton"; normalTitle = "Contact"; ObjectID = "Qxj-uk-32p"; */
-"Qxj-uk-32p.normalTitle" = "Contact";
+"Qxj-uk-32p.normalTitle" = "Contatto";
 
 /* Class = "UINavigationItem"; title = "Fancy Letters"; ObjectID = "TE0-uT-1TP"; */
-"TE0-uT-1TP.title" = "Fancy Letters";
+"TE0-uT-1TP.title" = "Lettere fantasiose";
 
 /* Class = "UINavigationItem"; title = "Status Messages"; ObjectID = "WA2-QF-teq"; */
-"WA2-QF-teq.title" = "Status Messages";
+"WA2-QF-teq.title" = "Messaggi di stato";
 
 /* Class = "UIButton"; normalTitle = "User Agreement"; ObjectID = "YRb-rQ-9Na"; */
-"YRb-rQ-9Na.normalTitle" = "User Agreement";
+"YRb-rQ-9Na.normalTitle" = "Accordo per gli utenti";
 
 /* Class = "UIButton"; normalTitle = "Monthly/ 2$"; ObjectID = "bYM-WF-5lT"; */
-"bYM-WF-5lT.normalTitle" = "Monthly 9.99$";
-
+"bYM-WF-5lT.normalTitle" = "Mensile 9.99$";
 
 /* Class = "UIButton"; normalTitle = "Free Button"; ObjectID = "Ozgun"; */
-"continue free" = "CONTINUE FREE";
+"continue free" = "PROVA GRATIS";
 
 
 /* Class = "UIButton"; normalTitle = "START"; ObjectID = "doF-Cd-R1w"; */
-"doF-Cd-R1w.normalTitle" = "START";
+"doF-Cd-R1w.normalTitle" = "COMINCIARE";
 
 /* Class = "UILabel"; text = "Scan the QR code which is generated in this app with your second phone."; ObjectID = "jK1-zp-Szh"; */
-"jK1-zp-Szh.text" = "Scan the QR code which is generated in this app with your second phone.";
+"jK1-zp-Szh.text" = "Scansiona il codice QR che viene generato in questa app con il tuo secondo telefono.";
 
 /* Class = "UINavigationItem"; title = "Pingo"; ObjectID = "mWG-tJ-DdD"; */
 "mWG-tJ-DdD.title" = "Pingo";
@@ -47,11 +46,10 @@
 "nS8-13-Gqk.title" = "Pingo";
 
 /* Class = "UIButton"; normalTitle = "Restore Purchases"; ObjectID = "rPn-ka-kCs"; */
-"rPn-ka-kCs.normalTitle" = "Restore Purchases";
+"rPn-ka-kCs.normalTitle" = "Ripristinare gli acquisti";
 
 /* Class = "UIButton"; normalTitle = "Pingo Website"; ObjectID = "rRs-Q2-M5N"; */
 "rRs-Q2-M5N.normalTitle" = "Pingo Website";
 
 /* Class = "UILabel"; text = "Try with 3 days free"; ObjectID = "snq-3L-EWJ"; */
-"snq-3L-EWJ.text" = "Try with 3 days free";
-
+"snq-3L-EWJ.text" = "Prova con 3 giorni gratis";

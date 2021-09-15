@@ -497,6 +497,9 @@
                             <constraint firstItem="n5P-9h-VK0" firstAttribute="top" secondItem="ct6-jq-0CN" secondAttribute="top" id="wV7-jV-TTE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="monthlyButton" destination="bYM-WF-5lT" id="zUD-ZC-kOz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNH-EM-cED" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -1,6 +1,6 @@
 
 /* Class = "UIButton"; normalTitle = "Weekly/ 1$"; ObjectID = "AnJ-BP-7LZ"; */
-"AnJ-BP-7LZ.normalTitle" = "Weekly 4.99$";
+"AnJ-BP-7LZ.normalTitle" = "Weekly/ 1$";
 
 /* Class = "UITextField"; placeholder = "Enter your text here"; ObjectID = "EEx-kE-Jer"; */
 "EEx-kE-Jer.placeholder" = "Enter your text here";
@@ -27,12 +27,7 @@
 "YRb-rQ-9Na.normalTitle" = "User Agreement";
 
 /* Class = "UIButton"; normalTitle = "Monthly/ 2$"; ObjectID = "bYM-WF-5lT"; */
-"bYM-WF-5lT.normalTitle" = "Monthly 9.99$";
-
-
-/* Class = "UIButton"; normalTitle = "Free Button"; ObjectID = "Ozgun"; */
-"continue free" = "CONTINUE FREE";
-
+"bYM-WF-5lT.normalTitle" = "Monthly/ 2$";
 
 /* Class = "UIButton"; normalTitle = "START"; ObjectID = "doF-Cd-R1w"; */
 "doF-Cd-R1w.normalTitle" = "START";
@@ -54,4 +49,3 @@
 
 /* Class = "UILabel"; text = "Try with 3 days free"; ObjectID = "snq-3L-EWJ"; */
 "snq-3L-EWJ.text" = "Try with 3 days free";
-

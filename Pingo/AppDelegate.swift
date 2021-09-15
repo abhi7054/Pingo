@@ -9,6 +9,7 @@ import UIKit
 
 struct CheckSubscriptionData: Codable {
     let purchase: Int
+    let id: Int
 }
 
 @main
@@ -60,6 +61,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         let json: CheckSubscriptionData = try! decoder.decode(CheckSubscriptionData.self, from: data)
                         print(json)
                         AppShared.shared.purchased = json.purchase
+                        AppShared.shared.id = json.id
                     }
                 }
             }.resume()

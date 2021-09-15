@@ -12,6 +12,7 @@
 		400D5CCD26CE3F1A00A5E992 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400D5CCC26CE3F1A00A5E992 /* StoreKit.framework */; };
 		4026580C26AB1FB2002069BB /* FontTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4026580B26AB1FB2002069BB /* FontTableViewCell.swift */; };
 		4026C13126D82A55008A8BE2 /* SubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4026C12F26D82A55008A8BE2 /* SubscribeViewController.swift */; };
+		4083FB8326F21D300055B412 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E1C19126AA17C80072B292 /* Main.storyboard */; };
 		40886CDD26ABAA3300620196 /* SettingsWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40886CDC26ABAA3300620196 /* SettingsWebViewController.swift */; };
 		40886CDF26ABAAC200620196 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40886CDE26ABAAC200620196 /* Constants.swift */; };
 		40B4C72C26ABA536005118BC /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B4C72B26ABA536005118BC /* StatusViewController.swift */; };
@@ -19,7 +20,6 @@
 		40E1C18C26AA17C80072B292 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E1C18B26AA17C80072B292 /* AppDelegate.swift */; };
 		40E1C18E26AA17C80072B292 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E1C18D26AA17C80072B292 /* SceneDelegate.swift */; };
 		40E1C19026AA17C80072B292 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E1C18F26AA17C80072B292 /* HomeViewController.swift */; };
-		40E1C19326AA17C80072B292 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E1C19126AA17C80072B292 /* Main.storyboard */; };
 		40E1C19526AA17CE0072B292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40E1C19426AA17CE0072B292 /* Assets.xcassets */; };
 		40E1C19826AA17CE0072B292 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E1C19626AA17CE0072B292 /* LaunchScreen.storyboard */; };
 		40E1C1A026AA23D50072B292 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E1C19F26AA23D50072B292 /* RoundedView.swift */; };
@@ -101,8 +101,28 @@
 		40886CDC26ABAA3300620196 /* SettingsWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsWebViewController.swift; sourceTree = "<group>"; };
 		40886CDE26ABAAC200620196 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		40B4C72B26ABA536005118BC /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
-		40CB4FD126EB551F00C50B0B /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Main.strings"; sourceTree = "<group>"; };
-		40CB4FD226EB551F00C50B0B /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		40CA05CE26ED365400B09FE4 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		40CA05CF26ED365400B09FE4 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		40CA05D026ED36A300B09FE4 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/Main.strings; sourceTree = "<group>"; };
+		40CA05D126ED36A300B09FE4 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		40CA05D226ED385800B09FE4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		40CA05D326ED385800B09FE4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		40CA05D426ED38BD00B09FE4 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Main.strings; sourceTree = "<group>"; };
+		40CA05D526ED38BE00B09FE4 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		40CA05D626ED38C700B09FE4 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Main.strings; sourceTree = "<group>"; };
+		40CA05D726ED38C700B09FE4 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		40CA05D826ED390100B09FE4 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Main.strings; sourceTree = "<group>"; };
+		40CA05D926ED390100B09FE4 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		40CA05DA26ED390D00B09FE4 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
+		40CA05DB26ED390D00B09FE4 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		40CA05DC26ED391900B09FE4 /* ms */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ms; path = ms.lproj/Main.strings; sourceTree = "<group>"; };
+		40CA05DD26ED391900B09FE4 /* ms */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ms; path = ms.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		40CA05DE26ED393F00B09FE4 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Main.strings; sourceTree = "<group>"; };
+		40CA05DF26ED393F00B09FE4 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		40CA05E026ED39B700B09FE4 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		40CA05E126ED39B700B09FE4 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		40CA05E226ED39C000B09FE4 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		40CA05E326ED39C000B09FE4 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		40DB0A7F26EA65BD002F1693 /* AppShared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppShared.swift; sourceTree = "<group>"; };
 		40E1C18826AA17C80072B292 /* Pingo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pingo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E1C18B26AA17C80072B292 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -323,7 +343,17 @@
 			knownRegions = (
 				en,
 				Base,
-				"es-419",
+				de,
+				fi,
+				fr,
+				he,
+				hi,
+				id,
+				it,
+				ms,
+				nb,
+				"pt-BR",
+				ru,
 			);
 			mainGroup = 40E1C17F26AA17C80072B292;
 			packageReferences = (
@@ -344,6 +374,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4083FB8326F21D300055B412 /* Main.storyboard in Resources */,
 				40E1C1B426AAF9EB0072B292 /* DMSans-Medium.ttf in Resources */,
 				40FB767526AB41FB00D74109 /* COMICATE.TTF in Resources */,
 				40E1C1E326AB041C0072B292 /* Poppins-Italic.ttf in Resources */,
@@ -379,7 +410,6 @@
 				40FB767C26AB421000D74109 /* orange juice 2.0.ttf in Resources */,
 				40FB767E26AB421600D74109 /* RemachineScript_Personal_Use.ttf in Resources */,
 				40E1C1D526AB041C0072B292 /* Poppins-BoldItalic.ttf in Resources */,
-				40E1C19326AA17C80072B292 /* Main.storyboard in Resources */,
 				40E1C1DF26AB041C0072B292 /* Poppins-Bold.ttf in Resources */,
 				40E1C1D326AB041C0072B292 /* Poppins-ThinItalic.ttf in Resources */,
 				40E1C1DD26AB041C0072B292 /* Poppins-Regular.ttf in Resources */,
@@ -426,8 +456,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				40E1C19226AA17C80072B292 /* Base */,
-				40CB4FD126EB551F00C50B0B /* es-419 */,
 				4019DC5D26EB570A00377E54 /* en */,
+				40CA05CE26ED365400B09FE4 /* de */,
+				40CA05D026ED36A300B09FE4 /* fi */,
+				40CA05D226ED385800B09FE4 /* fr */,
+				40CA05D426ED38BD00B09FE4 /* he */,
+				40CA05D626ED38C700B09FE4 /* hi */,
+				40CA05D826ED390100B09FE4 /* id */,
+				40CA05DA26ED390D00B09FE4 /* it */,
+				40CA05DC26ED391900B09FE4 /* ms */,
+				40CA05DE26ED393F00B09FE4 /* nb */,
+				40CA05E026ED39B700B09FE4 /* pt-BR */,
+				40CA05E226ED39C000B09FE4 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -436,7 +476,17 @@
 			isa = PBXVariantGroup;
 			children = (
 				40E1C19726AA17CE0072B292 /* Base */,
-				40CB4FD226EB551F00C50B0B /* es-419 */,
+				40CA05CF26ED365400B09FE4 /* de */,
+				40CA05D126ED36A300B09FE4 /* fi */,
+				40CA05D326ED385800B09FE4 /* fr */,
+				40CA05D526ED38BE00B09FE4 /* he */,
+				40CA05D726ED38C700B09FE4 /* hi */,
+				40CA05D926ED390100B09FE4 /* id */,
+				40CA05DB26ED390D00B09FE4 /* it */,
+				40CA05DD26ED391900B09FE4 /* ms */,
+				40CA05DF26ED393F00B09FE4 /* nb */,
+				40CA05E126ED39B700B09FE4 /* pt-BR */,
+				40CA05E326ED39C000B09FE4 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -569,7 +619,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = U72M7WWZ6N;
 				INFOPLIST_FILE = Pingo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -592,7 +642,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = U72M7WWZ6N;
 				INFOPLIST_FILE = Pingo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

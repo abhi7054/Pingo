@@ -13,4 +13,5 @@ class AppShared {
     var transactionReceipt: String?
     var deviceID: String?
     var purchased: Int?
+    var id: Int?
 }

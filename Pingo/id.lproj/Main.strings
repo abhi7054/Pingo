@@ -29,9 +29,8 @@
 /* Class = "UIButton"; normalTitle = "Monthly/ 2$"; ObjectID = "bYM-WF-5lT"; */
 "bYM-WF-5lT.normalTitle" = "Monthly 9.99$";
 
-
 /* Class = "UIButton"; normalTitle = "Free Button"; ObjectID = "Ozgun"; */
-"continue free" = "CONTINUE FREE";
+"continue free" = "TRY FREE";
 
 
 /* Class = "UIButton"; normalTitle = "START"; ObjectID = "doF-Cd-R1w"; */
@@ -54,4 +53,3 @@
 
 /* Class = "UILabel"; text = "Try with 3 days free"; ObjectID = "snq-3L-EWJ"; */
 "snq-3L-EWJ.text" = "Try with 3 days free";
-
